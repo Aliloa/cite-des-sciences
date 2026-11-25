@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+p {
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.basic-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    min-height: 45vh;
+    color: white;
+    background-image: url("../images/corean_part/passage-room.jpg");
+    background-size: 120%;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: rgba(88, 88, 88, 0.37);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.basic-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(7px);
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.basic-container:hover::before {
+    backdrop-filter: blur(13px);
+}
+
+.basic-container:hover {
+    background-size: 115%;
+}
+
+.basic-container div:first-child {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    height: 88%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+}
+
+.basic-container div:last-child {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.basic-btn {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    border: none;
+    font-family: "Reglarik";
+    font-size: 1rem;
+    outline: none;
+    transition: 0.1s ease;
+    color: white;
+}
+
+.basic-btn:hover {
+    scale: 1.05;
+}
+
+.passage-room {
+    background-image: url("../images/corean_part/passage-room.jpg");
+}
+
+.voo-pee {
+    background-image: url("../images/corean_part/voo-pee.jpg");
+}
+
+.woven-frequencies {
+    background-image: url("../images/corean_part/woven-frequencies.jpg");
+}
+
+.naked-island {
+    background-image: url("../images/corean_part/naked-island.jpg");
+}
+
+.youro-dance {
+    background-image: url("../images/corean_part/youro-dance.jpg");
+}
+
+.eternal-land {
+    background-image: url("../images/corean_part/eternal-land.jpg");
+}
+
+.spectacle {
+    background-image: url("../images/europ_part/epopee-naufrage.PNG");
+}
+
+.camera{
+    background-image: url("../images/europ_part/arbre-respiratoire.PNG");
+}
+
+.museum {
+background-image: url("../images/europ_part/elektra.PNG");
+}
+.vr-headset {
+    background-image: url("../images/europ_part/casque-vr.PNG");
+}
+
+.basic-container h1 {
+    text-align: center;
+}
+
+.basic-container h2 {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.pop-up {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: black;
+    padding: 36px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.pop-up::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(7px);
+    transition: 0.3s;
+}
+
+.active {
+    display: flex;
+}
+
+.pop-up-content {
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-up .img-container {
+    max-height: 40%;
+}
+
+.pop-up .img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.pop-up h2 {
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+}
+
+.text-container {
+    height: 90%;
+    margin: 8px 0px;
+    overflow-y: scroll;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    scale: 1.3;
+}
+
+.btn-home {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    color: white;
+    font-size: 0.9rem;
+    backdrop-filter: blur(8px);
+    transition: 0.2s ease;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+
+.btn-home:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+@media (min-width: 700px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        width: 85%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    /* .btn-home {
+        background: rgba(15, 30, 80, 0.10);
+        border: 0.5px solid rgba(15, 30, 80, 0.25);
+        color: rgb(15, 30, 80);
+    }
+
+    .btn-home:hover {
+        background: rgba(15, 30, 80, 0.18);
+    } */
+
+    .basic-container {
+        height: 100%;
+        min-height: 0;
+    }
+
+    .passage-room,
+    .spectacle {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .voo-pee,
+    .camera {
+        grid-column: 2 / 4;
+        grid-row: 1;
+    }
+
+    .woven-frequencies,
+    .museum {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .naked-island,
+    .vr-headset {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .youro-dance {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+    .eternal-land {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .pop-up-content {
+        flex-direction: row;
+        gap: 2rem;
+        width: 80%;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .pop-up .img-container {
+        max-width: 50%;
+        max-height: 100%;
+        height: 100%;
+    }
+}
